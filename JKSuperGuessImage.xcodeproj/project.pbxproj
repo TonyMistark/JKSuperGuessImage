@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3FF24951BBCEF5A003CD996 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FF24941BBCEF5A003CD996 /* main.m */; };
+		C3FF24981BBCEF5A003CD996 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FF24971BBCEF5A003CD996 /* AppDelegate.m */; };
+		C3FF249B1BBCEF5A003CD996 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FF249A1BBCEF5A003CD996 /* ViewController.m */; };
+		C3FF249E1BBCEF5A003CD996 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FF249C1BBCEF5A003CD996 /* Main.storyboard */; };
+		C3FF24A11BBCEF5A003CD996 /* JKSuperGuessImage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3FF249F1BBCEF5A003CD996 /* JKSuperGuessImage.xcdatamodeld */; };
+		C3FF24A31BBCEF5A003CD996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3FF24A21BBCEF5A003CD996 /* Assets.xcassets */; };
+		C3FF24A61BBCEF5A003CD996 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3FF24A41BBCEF5A003CD996 /* LaunchScreen.storyboard */; };
+		C3FF24B11BBCEF5A003CD996 /* JKSuperGuessImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FF24B01BBCEF5A003CD996 /* JKSuperGuessImageTests.m */; };
+		C3FF24BC1BBCEF5A003CD996 /* JKSuperGuessImageUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C3FF24BB1BBCEF5A003CD996 /* JKSuperGuessImageUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C3FF24AD1BBCEF5A003CD996 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3FF24881BBCEF5A003CD996 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3FF248F1BBCEF5A003CD996;
+			remoteInfo = JKSuperGuessImage;
+		};
+		C3FF24B81BBCEF5A003CD996 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3FF24881BBCEF5A003CD996 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3FF248F1BBCEF5A003CD996;
+			remoteInfo = JKSuperGuessImage;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C3FF24901BBCEF5A003CD996 /* JKSuperGuessImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKSuperGuessImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3FF24941BBCEF5A003CD996 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C3FF24961BBCEF5A003CD996 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C3FF24971BBCEF5A003CD996 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C3FF24991BBCEF5A003CD996 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C3FF249A1BBCEF5A003CD996 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C3FF249D1BBCEF5A003CD996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C3FF24A01BBCEF5A003CD996 /* JKSuperGuessImage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JKSuperGuessImage.xcdatamodel; sourceTree = "<group>"; };
+		C3FF24A21BBCEF5A003CD996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C3FF24A51BBCEF5A003CD996 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C3FF24A71BBCEF5A003CD996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3FF24AC1BBCEF5A003CD996 /* JKSuperGuessImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKSuperGuessImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3FF24B01BBCEF5A003CD996 /* JKSuperGuessImageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKSuperGuessImageTests.m; sourceTree = "<group>"; };
+		C3FF24B21BBCEF5A003CD996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3FF24B71BBCEF5A003CD996 /* JKSuperGuessImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKSuperGuessImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3FF24BB1BBCEF5A003CD996 /* JKSuperGuessImageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKSuperGuessImageUITests.m; sourceTree = "<group>"; };
+		C3FF24BD1BBCEF5A003CD996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3FF248D1BBCEF5A003CD996 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3FF24A91BBCEF5A003CD996 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3FF24B41BBCEF5A003CD996 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3FF24871BBCEF5A003CD996 = {
+			isa = PBXGroup;
+			children = (
+				C3FF24921BBCEF5A003CD996 /* JKSuperGuessImage */,
+				C3FF24AF1BBCEF5A003CD996 /* JKSuperGuessImageTests */,
+				C3FF24BA1BBCEF5A003CD996 /* JKSuperGuessImageUITests */,
+				C3FF24911BBCEF5A003CD996 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3FF24911BBCEF5A003CD996 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3FF24901BBCEF5A003CD996 /* JKSuperGuessImage.app */,
+				C3FF24AC1BBCEF5A003CD996 /* JKSuperGuessImageTests.xctest */,
+				C3FF24B71BBCEF5A003CD996 /* JKSuperGuessImageUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3FF24921BBCEF5A003CD996 /* JKSuperGuessImage */ = {
+			isa = PBXGroup;
+			children = (
+				C3FF24961BBCEF5A003CD996 /* AppDelegate.h */,
+				C3FF24971BBCEF5A003CD996 /* AppDelegate.m */,
+				C3FF24991BBCEF5A003CD996 /* ViewController.h */,
+				C3FF249A1BBCEF5A003CD996 /* ViewController.m */,
+				C3FF249C1BBCEF5A003CD996 /* Main.storyboard */,
+				C3FF24A21BBCEF5A003CD996 /* Assets.xcassets */,
+				C3FF24A41BBCEF5A003CD996 /* LaunchScreen.storyboard */,
+				C3FF24A71BBCEF5A003CD996 /* Info.plist */,
+				C3FF249F1BBCEF5A003CD996 /* JKSuperGuessImage.xcdatamodeld */,
+				C3FF24931BBCEF5A003CD996 /* Supporting Files */,
+			);
+			path = JKSuperGuessImage;
+			sourceTree = "<group>";
+		};
+		C3FF24931BBCEF5A003CD996 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3FF24941BBCEF5A003CD996 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C3FF24AF1BBCEF5A003CD996 /* JKSuperGuessImageTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3FF24B01BBCEF5A003CD996 /* JKSuperGuessImageTests.m */,
+				C3FF24B21BBCEF5A003CD996 /* Info.plist */,
+			);
+			path = JKSuperGuessImageTests;
+			sourceTree = "<group>";
+		};
+		C3FF24BA1BBCEF5A003CD996 /* JKSuperGuessImageUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C3FF24BB1BBCEF5A003CD996 /* JKSuperGuessImageUITests.m */,
+				C3FF24BD1BBCEF5A003CD996 /* Info.plist */,
+			);
+			path = JKSuperGuessImageUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3FF248F1BBCEF5A003CD996 /* JKSuperGuessImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3FF24C01BBCEF5A003CD996 /* Build configuration list for PBXNativeTarget "JKSuperGuessImage" */;
+			buildPhases = (
+				C3FF248C1BBCEF5A003CD996 /* Sources */,
+				C3FF248D1BBCEF5A003CD996 /* Frameworks */,
+				C3FF248E1BBCEF5A003CD996 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JKSuperGuessImage;
+			productName = JKSuperGuessImage;
+			productReference = C3FF24901BBCEF5A003CD996 /* JKSuperGuessImage.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C3FF24AB1BBCEF5A003CD996 /* JKSuperGuessImageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3FF24C31BBCEF5A003CD996 /* Build configuration list for PBXNativeTarget "JKSuperGuessImageTests" */;
+			buildPhases = (
+				C3FF24A81BBCEF5A003CD996 /* Sources */,
+				C3FF24A91BBCEF5A003CD996 /* Frameworks */,
+				C3FF24AA1BBCEF5A003CD996 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3FF24AE1BBCEF5A003CD996 /* PBXTargetDependency */,
+			);
+			name = JKSuperGuessImageTests;
+			productName = JKSuperGuessImageTests;
+			productReference = C3FF24AC1BBCEF5A003CD996 /* JKSuperGuessImageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C3FF24B61BBCEF5A003CD996 /* JKSuperGuessImageUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3FF24C61BBCEF5A003CD996 /* Build configuration list for PBXNativeTarget "JKSuperGuessImageUITests" */;
+			buildPhases = (
+				C3FF24B31BBCEF5A003CD996 /* Sources */,
+				C3FF24B41BBCEF5A003CD996 /* Frameworks */,
+				C3FF24B51BBCEF5A003CD996 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3FF24B91BBCEF5A003CD996 /* PBXTargetDependency */,
+			);
+			name = JKSuperGuessImageUITests;
+			productName = JKSuperGuessImageUITests;
+			productReference = C3FF24B71BBCEF5A003CD996 /* JKSuperGuessImageUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3FF24881BBCEF5A003CD996 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "弥超";
+				TargetAttributes = {
+					C3FF248F1BBCEF5A003CD996 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					C3FF24AB1BBCEF5A003CD996 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = C3FF248F1BBCEF5A003CD996;
+					};
+					C3FF24B61BBCEF5A003CD996 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = C3FF248F1BBCEF5A003CD996;
+					};
+				};
+			};
+			buildConfigurationList = C3FF248B1BBCEF5A003CD996 /* Build configuration list for PBXProject "JKSuperGuessImage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C3FF24871BBCEF5A003CD996;
+			productRefGroup = C3FF24911BBCEF5A003CD996 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3FF248F1BBCEF5A003CD996 /* JKSuperGuessImage */,
+				C3FF24AB1BBCEF5A003CD996 /* JKSuperGuessImageTests */,
+				C3FF24B61BBCEF5A003CD996 /* JKSuperGuessImageUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3FF248E1BBCEF5A003CD996 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3FF24A61BBCEF5A003CD996 /* LaunchScreen.storyboard in Resources */,
+				C3FF24A31BBCEF5A003CD996 /* Assets.xcassets in Resources */,
+				C3FF249E1BBCEF5A003CD996 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3FF24AA1BBCEF5A003CD996 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3FF24B51BBCEF5A003CD996 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3FF248C1BBCEF5A003CD996 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3FF24A11BBCEF5A003CD996 /* JKSuperGuessImage.xcdatamodeld in Sources */,
+				C3FF249B1BBCEF5A003CD996 /* ViewController.m in Sources */,
+				C3FF24981BBCEF5A003CD996 /* AppDelegate.m in Sources */,
+				C3FF24951BBCEF5A003CD996 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3FF24A81BBCEF5A003CD996 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3FF24B11BBCEF5A003CD996 /* JKSuperGuessImageTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3FF24B31BBCEF5A003CD996 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3FF24BC1BBCEF5A003CD996 /* JKSuperGuessImageUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3FF24AE1BBCEF5A003CD996 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3FF248F1BBCEF5A003CD996 /* JKSuperGuessImage */;
+			targetProxy = C3FF24AD1BBCEF5A003CD996 /* PBXContainerItemProxy */;
+		};
+		C3FF24B91BBCEF5A003CD996 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3FF248F1BBCEF5A003CD996 /* JKSuperGuessImage */;
+			targetProxy = C3FF24B81BBCEF5A003CD996 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C3FF249C1BBCEF5A003CD996 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3FF249D1BBCEF5A003CD996 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C3FF24A41BBCEF5A003CD996 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3FF24A51BBCEF5A003CD996 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3FF24BE1BBCEF5A003CD996 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C3FF24BF1BBCEF5A003CD996 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3FF24C11BBCEF5A003CD996 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JKSuperGuessImage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tony.JKSuperGuessImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C3FF24C21BBCEF5A003CD996 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JKSuperGuessImage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tony.JKSuperGuessImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C3FF24C41BBCEF5A003CD996 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JKSuperGuessImageTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tony.JKSuperGuessImageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKSuperGuessImage.app/JKSuperGuessImage";
+			};
+			name = Debug;
+		};
+		C3FF24C51BBCEF5A003CD996 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JKSuperGuessImageTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tony.JKSuperGuessImageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKSuperGuessImage.app/JKSuperGuessImage";
+			};
+			name = Release;
+		};
+		C3FF24C71BBCEF5A003CD996 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JKSuperGuessImageUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tony.JKSuperGuessImageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JKSuperGuessImage;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C3FF24C81BBCEF5A003CD996 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JKSuperGuessImageUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tony.JKSuperGuessImageUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JKSuperGuessImage;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3FF248B1BBCEF5A003CD996 /* Build configuration list for PBXProject "JKSuperGuessImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3FF24BE1BBCEF5A003CD996 /* Debug */,
+				C3FF24BF1BBCEF5A003CD996 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3FF24C01BBCEF5A003CD996 /* Build configuration list for PBXNativeTarget "JKSuperGuessImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3FF24C11BBCEF5A003CD996 /* Debug */,
+				C3FF24C21BBCEF5A003CD996 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C3FF24C31BBCEF5A003CD996 /* Build configuration list for PBXNativeTarget "JKSuperGuessImageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3FF24C41BBCEF5A003CD996 /* Debug */,
+				C3FF24C51BBCEF5A003CD996 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C3FF24C61BBCEF5A003CD996 /* Build configuration list for PBXNativeTarget "JKSuperGuessImageUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3FF24C71BBCEF5A003CD996 /* Debug */,
+				C3FF24C81BBCEF5A003CD996 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C3FF249F1BBCEF5A003CD996 /* JKSuperGuessImage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C3FF24A01BBCEF5A003CD996 /* JKSuperGuessImage.xcdatamodel */,
+			);
+			currentVersion = C3FF24A01BBCEF5A003CD996 /* JKSuperGuessImage.xcdatamodel */;
+			path = JKSuperGuessImage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C3FF24881BBCEF5A003CD996 /* Project object */;
+}
