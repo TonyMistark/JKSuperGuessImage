@@ -10,7 +10,7 @@
 #import "JKQuestionInfo.h"
 
 CGFloat const imgW = 150;
-//#define KScreenW =
+#define KScreenW [UIScreen mainScreen].bounds.size.width
 
 @interface ViewController ()
 /*
@@ -111,6 +111,23 @@ CGFloat const imgW = 150;
  *大图/遮盖/中间 3个按钮的点击事件
  */
 - (IBAction)imageBtnChangeOnClick {
+    if (0==self.cover.alpha){
+        //图片放大
+        CGFloat scaleX = KScreenW/imgW;
+        CGFloat scaleY = scaleX;
+        
+        [UIView animateWithDuration:1.0 animations:^{self.ImageInsideBtn.transform = CGAffineTransformMakeScale(scaleX, scaleY);
+            //遮盖显现
+            self.cover.alpha = 0.5;
+        }];
+    }else
+    {
+        //图片还原
+        [UIView animateWithDuration:1.0 animations:^{
+            self.ImageInsideBtn.transform = CGAffineTransformIsIdentity;
+            self.cover.alpha = 0.0;
+        }];
+                                   }
 }
 /*
  *下一题点击事件
