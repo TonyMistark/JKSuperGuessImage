@@ -99,6 +99,7 @@ CGFloat const imgW = 150;
  *提示按钮的点击时间
  */
 - (IBAction)TipBtnOnclick:(id)sender {
+#warning noCode
 }
 
 /*
@@ -116,7 +117,10 @@ CGFloat const imgW = 150;
         CGFloat scaleX = KScreenW/imgW;
         CGFloat scaleY = scaleX;
         
+        CGFloat translateY = self.ImageInsideBtn.frame.origin.y/scaleX;
+        
         [UIView animateWithDuration:1.0 animations:^{self.ImageInsideBtn.transform = CGAffineTransformMakeScale(scaleX, scaleY);
+            self.ImageInsideBtn.transform = CGAffineTransformTranslate(self.ImageInsideBtn.transform, 0, translateY);
             //遮盖显现
             self.cover.alpha = 0.5;
         }];
@@ -124,8 +128,9 @@ CGFloat const imgW = 150;
     {
         //图片还原
         [UIView animateWithDuration:1.0 animations:^{
-            self.ImageInsideBtn.transform = CGAffineTransformIsIdentity;
+            self.ImageInsideBtn.transform = CGAffineTransformIdentity;
             self.cover.alpha = 0.0;
+            
         }];
                                    }
 }
@@ -133,6 +138,24 @@ CGFloat const imgW = 150;
  *下一题点击事件
  */
 - (IBAction)nextBtnOnClick {
+    //1.索引自增，并判断是否越界
+    self.index ++;
+    if (self.index >= self.questions.count) {
+        
+        NSLog(@"恭喜通关");
+#warning NoCode
+        self.index--;
+    }
+    //2.取出模型
+    JKQuestionInfo *question = self.questions[self.index];
+    //3.设计基本信息（参考图片浏览器）
+    [self setupBaseInfo];
+    //4.创建答案按钮
+    [self createAnswerBtns:question];
+    //5.创建备选答案按钮
+    [self createOptionBtns:question];
+    
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -143,5 +166,34 @@ CGFloat const imgW = 150;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - 私有方法
+/*
+ *设置基本信息
+ */
+
+-(void)setupBaseInfo:(JKQuestionInfo *)question
+{
+    //顶部图片索引改变
+    self.topIndexLabel.text = [NSString stringWithFormat:@"%d/%zd",self.index+1, self.questions.count];
+    //图片种类描述改变
+    self.descLabel.text = question.title;
+    //图片改变
+    [self.ImageInsideBtn setImage:question forState:UIControlStateNormal];
+    //下一题按钮状态改变
+    self.nextBtn.enabled = (self.index != self.questions.count - 1);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @end

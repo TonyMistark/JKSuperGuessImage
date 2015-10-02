@@ -9,18 +9,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mpA-GV-gBS">
-                                <rect key="frame" x="150" y="30" width="31" height="21"/>
+                                <rect key="frame" x="172" y="30" width="31" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="恶搞风格大片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aXs-XD-DF6">
-                                <rect key="frame" x="109" y="59" width="102" height="21"/>
+                                <rect key="frame" x="136" y="59" width="102" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XLR-48-Ey3">
-                                <rect key="frame" x="270" y="114" width="30" height="30"/>
+                                <rect key="frame" x="325" y="114" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="大图"/>
                                 <connections>
@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KM3-Sr-hi5">
-                                <rect key="frame" x="263" y="169" width="45" height="30"/>
+                                <rect key="frame" x="310" y="169" width="45" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="下一题"/>
                                 <connections>
@@ -59,31 +59,32 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gjX-Po-Vil">
-                                <rect key="frame" x="97" y="98" width="127" height="123"/>
+                                <rect key="frame" x="124" y="98" width="127" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="此处为图"/>
+                                <state key="normal" backgroundImage="movie_ygbh.png"/>
                                 <connections>
                                     <action selector="nextBtnOnClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="PXg-gB-5u4"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="ofg-PD-fml">
-                                <rect key="frame" x="0.0" y="369" width="320" height="209"/>
+                                <rect key="frame" x="0.0" y="450" width="375" height="217"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.48055272799999998" blue="0.31154537510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="98U-Zb-aLs">
-                                <rect key="frame" x="0.0" y="289" width="320" height="46"/>
+                                <rect key="frame" x="0.0" y="381" width="375" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.48055272799999998" blue="0.31154537510000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m5b-0z-iJC">
-                                <rect key="frame" x="214" y="26" width="86" height="30"/>
+                                <rect key="frame" x="269" y="26" width="86" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="score:10000"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.75714437565015202" green="1" blue="0.9145678890992005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="ImageInsideBtn" destination="gjX-Po-Vil" id="gpD-Qg-PXt"/>
                         <outlet property="answerView" destination="98U-Zb-aLs" id="et6-XB-OG2"/>
@@ -96,7 +97,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="343"/>
+            <point key="canvasLocation" x="161.5" y="342.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="movie_ygbh.png" width="640" height="702"/>
+    </resources>
 </document>
