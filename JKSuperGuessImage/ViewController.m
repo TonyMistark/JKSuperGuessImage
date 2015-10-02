@@ -111,10 +111,6 @@ CGFloat const imgW = 150;
  *大图/遮盖/中间 3个按钮的点击事件
  */
 - (IBAction)imageBtnChangeOnClick {
-    if (0== self.cover.alpha) {
-        //
-        <#statements#>
-    }
 }
 /*
  *下一题点击事件
