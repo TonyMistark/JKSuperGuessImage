@@ -149,7 +149,7 @@ CGFloat const imgW = 150;
     //2.取出模型
     JKQuestionInfo *question = self.questions[self.index];
     //3.设计基本信息（参考图片浏览器）
-    [self setupBaseInfo];
+    [self setupBaseInfo:question];
     //4.创建答案按钮
     [self createAnswerBtns:question];
     //5.创建备选答案按钮
@@ -169,7 +169,7 @@ CGFloat const imgW = 150;
 
 #pragma mark - 私有方法
 /*
- *设置基本信息
+ *3.设置基本信息
  */
 
 -(void)setupBaseInfo:(JKQuestionInfo *)question
@@ -179,15 +179,27 @@ CGFloat const imgW = 150;
     //图片种类描述改变
     self.descLabel.text = question.title;
     //图片改变
-    [self.ImageInsideBtn setImage:question forState:UIControlStateNormal];
+    [self.ImageInsideBtn setImage:question.image forState:UIControlStateNormal];
     //下一题按钮状态改变
     self.nextBtn.enabled = (self.index != self.questions.count - 1);
     
 }
 
+/*
+ *4.创建答案按钮
+ */
+-(void)createAnswerBtns:(JKQuestionInfo *)question
+{
+#warning noCode
+}
 
-
-
+/*
+ *5.创建备选答案按钮
+ */
+-(void)createOptionBtns:(JKQuestionInfo *)question
+{
+#warning noCode
+}
 
 
 
