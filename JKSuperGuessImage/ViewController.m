@@ -113,7 +113,24 @@ NSInteger const kTipDecreaseScore = -200;
  *提示按钮的点击时间
  */
 - (IBAction)TipBtnOnclick:(id)sender {
-#warning noCode
+    //1.清空答案按钮内文字
+    for (UIButton *answerBtn in self.answerView.subviews) {
+        [self answerBtnOnClick:answerBtn];
+    }
+    
+    //2.取出答案中的第一个字
+    NSString *answer = [self.questions[self.index] answer];
+    NSString *firstWord = [answer substringFromIndex:1];
+    NSLog(@"lalalalalalal%@",firstWord);
+    //3.模拟点击optionView中第一个正确的按钮，扣分
+    for (UIButton *optionBtn in self.optionsView.subviews) {
+        if ([optionBtn.currentTitle isEqualToString:firstWord]){
+            [self optionBtnOnClick:optionBtn];
+            [self coinChange:kTipDecreaseScore];
+            break;
+        }
+    }
+    
 }
 
 /*
@@ -152,12 +169,13 @@ NSInteger const kTipDecreaseScore = -200;
  *下一题点击事件
  */
 - (IBAction)nextBtnOnClick {
+    NSLog(@"-->enter:nextBtnOnClick");
     //1.索引自增，并判断是否越界
     self.index ++;
+    NSLog(@"index==%d",self.index);
     if (self.index >= self.questions.count) {
         
         NSLog(@"恭喜通关");
-#warning NoCode
         self.index--;
     }
     //2.取出模型
@@ -191,7 +209,7 @@ NSInteger const kTipDecreaseScore = -200;
 -(void)setupBaseInfo:(JKQuestionInfo *)question
 {
     //顶部图片索引改变
-    self.topIndexLabel.text = [NSString stringWithFormat:@"%d/%zd",self.index+1, self.questions.count];
+    self.topIndexLabel.text = [NSString stringWithFormat:@"%d/%ld",self.index+1, self.questions.count];
     //图片种类描述改变
     self.descLabel.text = question.title;
     //图片改变
@@ -206,6 +224,7 @@ NSInteger const kTipDecreaseScore = -200;
  */
 -(void)createAnswerBtns:(JKQuestionInfo *)question
 {
+    NSLog(@"-->enter:createAnswerBtns");
     //清空answerView
     for (UIButton *btn in self.answerView.subviews) {
         [btn removeFromSuperview];
@@ -221,7 +240,7 @@ NSInteger const kTipDecreaseScore = -200;
         [btn setBackgroundImage:[UIImage imageNamed:@"btn_answer"] forState:UIControlStateNormal];
         [btn setBackgroundImage:[UIImage imageNamed:@"btn_answer_highlighted"] forState:UIControlStateHighlighted];
         [btn setTitleColor:kAnswerBtnTitleColor forState:UIControlStateNormal];
-        [btn addTarget:self action:@selector(answerBtnOnClick:) forControlEvents:UIControlEventTouchUpOutside];
+        [btn addTarget:self action:@selector(answerBtnOnClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.answerView addSubview:btn];
     }
 }
@@ -231,7 +250,8 @@ NSInteger const kTipDecreaseScore = -200;
  */
 -(void)createOptionBtns:(JKQuestionInfo *)question
 {
-    int optionCount = question.options.count;
+    NSLog(@"-->enter:createOptionBtns");
+    NSUInteger optionCount = question.options.count;
     if (self.answerView.subviews.count != optionCount) {
         //若没有按钮就创建按钮
         CGFloat optionW = self.optionsView.bounds.size.width;
@@ -246,7 +266,7 @@ NSInteger const kTipDecreaseScore = -200;
             [btn setBackgroundImage:[UIImage imageNamed:@"btn_answer"] forState:UIControlStateNormal];
             [btn setBackgroundImage:[UIImage imageNamed:@"btn_answer_highlighted"] forState:UIControlStateHighlighted];
             [btn setTitleColor:kAnswerBtnTitleColor forState:UIControlStateNormal];
-            [btn addTarget:self action:@selector(optionBtnOnClick:) forControlEvents:UIControlEventTouchUpOutside];
+            [btn addTarget:self action:@selector(optionBtnOnClick:) forControlEvents:UIControlEventTouchUpInside];
             [self.optionsView addSubview:btn];
             
         }
@@ -255,6 +275,7 @@ NSInteger const kTipDecreaseScore = -200;
     for (int i=0; i<optionCount; i++) {
         UIButton *optionBtn = self.optionsView.subviews[i];
         [optionBtn setTitle:question.options[i] forState:UIControlStateNormal];
+        NSLog(@"question.options[%d] = %@",i,question.options[i]);
         optionBtn.hidden = NO;
     }
 }
@@ -264,7 +285,9 @@ NSInteger const kTipDecreaseScore = -200;
  *答案按钮点击方法
  */
 -(void)answerBtnOnClick:(UIButton *)answerBtn
-{   NSString *anserStr = answerBtn.currentTitle;
+{
+    NSLog(@"-->enter:answerBtnOnClick");
+    NSString *anserStr = answerBtn.currentTitle;
     //若按钮为空，直接返回
     if (nil == answerBtn.currentTitle) {
         return;
@@ -296,6 +319,7 @@ NSInteger const kTipDecreaseScore = -200;
  */
 -(void)optionBtnOnClick:(UIButton *)optionBtn
 {
+    NSLog(@"-->enteroptionBtnOnClick");
     NSString *optionStr = optionBtn.currentTitle;
     //1.填字进answerView
     for (UIButton *answerBtn in self.answerView.subviews) {
@@ -327,9 +351,11 @@ NSInteger const kTipDecreaseScore = -200;
             for (UIButton *answerBtn in self.answerView.subviews) {
                 //->3.2相同，全部字体变蓝，加分，1秒后自动进入下一题
                 [answerBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-                [self coinChange:kTrueAddScore];
-                [self performSelector:@selector(nextBtnOnClick) withObject:nil afterDelay:1.0];
             }
+            [self coinChange:kTrueAddScore];
+            //恢复optionView的用户交互
+            self.optionsView.userInteractionEnabled = YES;
+            [self performSelector:@selector(nextBtnOnClick) withObject:nil afterDelay:1.0];
         }else{
                 for (UIButton *answerBtn in self.answerView.subviews) {
                     //->3.3与答案相比，不同，全部字体变红，扣分
