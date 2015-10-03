@@ -686,6 +686,7 @@
 				C3FF24C21BBCEF5A003CD996 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3FF24C31BBCEF5A003CD996 /* Build configuration list for PBXNativeTarget "JKSuperGuessImageTests" */ = {
 			isa = XCConfigurationList;
@@ -694,6 +695,7 @@
 				C3FF24C51BBCEF5A003CD996 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3FF24C61BBCEF5A003CD996 /* Build configuration list for PBXNativeTarget "JKSuperGuessImageUITests" */ = {
 			isa = XCConfigurationList;
@@ -702,6 +704,7 @@
 				C3FF24C81BBCEF5A003CD996 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

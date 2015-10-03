@@ -10,7 +10,21 @@
 #import "JKQuestionInfo.h"
 
 CGFloat const imgW = 150;
-#define KScreenW [UIScreen mainScreen].bounds.size.width
+#define ingW self.ImageInsideBtn.bounds.size.width
+#define kScreenW [UIScreen mainScreen].bounds.size.width
+#define kAnswerBtnTitleColor [UIColor blackColor]
+/*
+ *常量
+ */
+CGFloat const kBtnW = 35;
+CGFloat const kBtnH = 35;
+CGFloat const kMarginBtweenBtns = 10;
+NSInteger const kOptionViewTotal = 7;
+
+NSInteger const kTrueAddScore = 200;
+NSInteger const kFalseDecreaseScore = -200;
+NSInteger const kTipDecreaseScore = -200;
+
 
 @interface ViewController ()
 /*
@@ -114,7 +128,7 @@ CGFloat const imgW = 150;
 - (IBAction)imageBtnChangeOnClick {
     if (0==self.cover.alpha){
         //图片放大
-        CGFloat scaleX = KScreenW/imgW;
+        CGFloat scaleX = kScreenW/imgW;
         CGFloat scaleY = scaleX;
         
         CGFloat translateY = self.ImageInsideBtn.frame.origin.y/scaleX;
@@ -190,7 +204,21 @@ CGFloat const imgW = 150;
  */
 -(void)createAnswerBtns:(JKQuestionInfo *)question
 {
-#warning noCode
+    //清空answerView
+    for (UIButton *btn in self.answerView.subviews) {
+        [btn removeFromSuperview];
+    }
+    //获取答案按钮的个数
+    NSInteger answerBtnCount = question.answer.length;
+    CGFloat answerW = self.answerView.bounds.size.width;
+    CGFloat answerEdgeInset = (answerW - answerBtnCount*kBtnH - (answerBtnCount-1)*kMarginBtweenBtns)*0.5;
+    for(int i=0;i<answerBtnCount;i++){
+        UIButton *btn = [[UIButton alloc]init];
+        CGFloat btnX = answerEdgeInset+i*(kBtnW+kMarginBtweenBtns);
+        btn.frame = CGRectMake(btnX, 0, kBtnW, kBtnH);
+        [btn setBackgroundImage:[UIImage imageNamed:@"btn_answer"] forState:UIControlStateNormal];
+        [btn setBackgroundImage:[UIImage imageNamed:@"btn_answer_highlighted"] forState:UIControlStateHighlighted];
+    }
 }
 
 /*
