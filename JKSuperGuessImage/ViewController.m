@@ -174,6 +174,8 @@ NSInteger const kTipDecreaseScore = -200;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.index = -1;
+    [self nextBtnOnClick];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -211,7 +213,7 @@ NSInteger const kTipDecreaseScore = -200;
     //获取答案按钮的个数
     NSInteger answerBtnCount = question.answer.length;
     CGFloat answerW = self.answerView.bounds.size.width;
-    CGFloat answerEdgeInset = (answerW - answerBtnCount*kBtnH - (answerBtnCount-1)*kMarginBtweenBtns)*0.5;
+    CGFloat answerEdgeInset = (answerW - answerBtnCount*kBtnW - (answerBtnCount-1)*kMarginBtweenBtns)*0.5;
     for(int i=0;i<answerBtnCount;i++){
         UIButton *btn = [[UIButton alloc]init];
         CGFloat btnX = answerEdgeInset+i*(kBtnW+kMarginBtweenBtns);
@@ -229,10 +231,73 @@ NSInteger const kTipDecreaseScore = -200;
  */
 -(void)createOptionBtns:(JKQuestionInfo *)question
 {
-#warning noCode
+    int optionCount = question.options.count;
+    if (self.answerView.subviews.count != optionCount) {
+        //若没有按钮就创建按钮
+        CGFloat optionW = self.optionsView.bounds.size.width;
+        CGFloat optionEdgeInset = (optionW - kOptionViewTotal*kBtnW - (kOptionViewTotal-1)*kMarginBtweenBtns)*0.5;
+        for (int i=0; i<optionCount; i++) {
+            UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+            int col = i%kOptionViewTotal;
+            int row = i/kOptionViewTotal;
+            CGFloat btnX = optionEdgeInset + (kBtnW + kMarginBtweenBtns)*col;
+            CGFloat btnY = kMarginBtweenBtns + (kBtnW +kMarginBtweenBtns)*row;
+            btn.frame = CGRectMake(btnX, btnY, kBtnW, kBtnH);
+            [btn setBackgroundImage:[UIImage imageNamed:@"btn_answer"] forState:UIControlStateNormal];
+            [btn setBackgroundImage:[UIImage imageNamed:@"btn_answer_highlighted"] forState:UIControlStateHighlighted];
+            [btn setTitleColor:kAnswerBtnTitleColor forState:UIControlStateNormal];
+            [btn addTarget:self action:@selector(optionBtnOnClick:) forControlEvents:UIControlEventTouchUpOutside];
+            [self.optionsView addSubview:btn];
+            
+        }
+        
+    }
+    for (int i=0; i<optionCount; i++) {
+        UIButton *optionBtn = self.optionsView.subviews[i];
+        [optionBtn setTitle:question.options[i] forState:UIControlStateNormal];
+        optionBtn.hidden = NO;
+    }
 }
 
+#pragma 下面按钮的点击方法
+/*
+ *答案按钮点击方法
+ */
+-(void)answerBtnOnClick:(UIButton *)answerBtn
+{   NSString *anserStr = answerBtn.currentTitle;
+    //若按钮为空，直接返回
+    if (nil == answerBtn.currentTitle) {
+        return;
+    }
+    //若不为空
+    //1.去掉按钮内容
+    [answerBtn setTitle:nil forState:UIControlStateNormal];
+    //2.恢复optionView 中隐藏的按钮
+    for (UIButton *optionBtn in self.optionsView.subviews) {
+        if ([anserStr isEqualToString:optionBtn.currentTitle] && optionBtn.isHidden) {
+            optionBtn.hidden = NO;
+            break;
+        }
+    }
+    
+    //3.若字体颜色不对，则统统恢复黑色
+    if (answerBtn.currentTitleColor != kAnswerBtnTitleColor) {
+        for (UIButton *answerBtn in self.answerView.subviews) {
+            [answerBtn setTitleColor:kAnswerBtnTitleColor forState:UIControlStateNormal];
+        }
+        
+        //恢复optionView的用户交互
+        self.optionsView.userInteractionEnabled = YES;
+    }
+}
 
+/*
+ *备选答案按钮点击方法
+ */
+-(void)optionBtnOnClick:(UIButton *)optionBtn
+{
+#warning codeMe
+}
 
 
 

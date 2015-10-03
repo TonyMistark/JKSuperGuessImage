@@ -15,7 +15,7 @@
 @property(nonatomic, copy) NSString *answer;
 @property(nonatomic, copy) NSString *icon;
 @property(nonatomic, copy) NSString *title;
-@property(nonatomic, strong) NSString *options;
+@property(nonatomic, strong) NSArray *options;
 
 -(instancetype)initWithDict:(NSDictionary *)dict;//对象方法
 +(instancetype)questionWithDict:(NSDictionary *)dict;//类方法
