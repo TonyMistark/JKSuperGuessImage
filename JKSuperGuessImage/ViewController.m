@@ -296,9 +296,59 @@ NSInteger const kTipDecreaseScore = -200;
  */
 -(void)optionBtnOnClick:(UIButton *)optionBtn
 {
-#warning codeMe
+    NSString *optionStr = optionBtn.currentTitle;
+    //1.填字进answerView
+    for (UIButton *answerBtn in self.answerView.subviews) {
+        if (nil==answerBtn.currentTitle){
+            [answerBtn setTitle:optionStr forState:UIControlStateNormal];
+            break;
+        
+        }
+    }
+    //2.隐藏按钮
+    optionBtn.hidden = YES;
+    //3.当answerView中字满的时候
+    BOOL isFull = YES;
+    NSMutableString *strM = [NSMutableString string];
+    for (UIButton *answerBtn in self.answerView.subviews) {
+        if (nil==answerBtn.currentTitle){
+            isFull = NO;
+            break;
+        }else{
+            //->3.1将答案区按钮中字拼成一个字符串
+            [strM appendString:answerBtn.currentTitle];
+        }
+    }
+    
+    if (YES==isFull) {
+        self.optionsView.userInteractionEnabled = NO;
+        NSString *answer = [self.questions[self.index] answer];
+        if ([strM isEqualToString:answer]) {
+            for (UIButton *answerBtn in self.answerView.subviews) {
+                //->3.2相同，全部字体变蓝，加分，1秒后自动进入下一题
+                [answerBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+                [self coinChange:kTrueAddScore];
+                [self performSelector:@selector(nextBtnOnClick) withObject:nil afterDelay:1.0];
+            }
+        }else{
+                for (UIButton *answerBtn in self.answerView.subviews) {
+                    //->3.3与答案相比，不同，全部字体变红，扣分
+                    [answerBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+                    [self coinChange:kFalseDecreaseScore];
+                
+            }
+        }
+    }
+    
 }
-
+#pragma  mark - 分数变化
+-(void)coinChange:(NSInteger)delCoin
+{
+    NSInteger currentCoin = [self.coinBtn.currentTitle integerValue];
+    currentCoin += delCoin;
+    NSString *coinStr = [NSString stringWithFormat:@"%ld",(long)currentCoin];
+    [self.coinBtn setTitle:coinStr forState:UIControlStateDisabled];
+}
 
 
 
