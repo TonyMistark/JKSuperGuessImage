@@ -218,6 +218,9 @@ NSInteger const kTipDecreaseScore = -200;
         btn.frame = CGRectMake(btnX, 0, kBtnW, kBtnH);
         [btn setBackgroundImage:[UIImage imageNamed:@"btn_answer"] forState:UIControlStateNormal];
         [btn setBackgroundImage:[UIImage imageNamed:@"btn_answer_highlighted"] forState:UIControlStateHighlighted];
+        [btn setTitleColor:kAnswerBtnTitleColor forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(answerBtnOnClick:) forControlEvents:UIControlEventTouchUpOutside];
+        [self.answerView addSubview:btn];
     }
 }
 
