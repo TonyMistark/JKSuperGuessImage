@@ -224,7 +224,6 @@ NSInteger const kTipDecreaseScore = -200;
  */
 -(void)createAnswerBtns:(JKQuestionInfo *)question
 {
-    NSLog(@"-->enter:createAnswerBtns");
     //清空answerView
     for (UIButton *btn in self.answerView.subviews) {
         [btn removeFromSuperview];
@@ -250,7 +249,7 @@ NSInteger const kTipDecreaseScore = -200;
  */
 -(void)createOptionBtns:(JKQuestionInfo *)question
 {
-    NSLog(@"-->enter:createOptionBtns");
+    NSLog(@"-->enter:createOptionBtns->subviews.cou=%lu",(unsigned long)self.answerView.subviews.count);
     NSUInteger optionCount = question.options.count;
     if (self.answerView.subviews.count != optionCount) {
         //若没有按钮就创建按钮
@@ -275,7 +274,6 @@ NSInteger const kTipDecreaseScore = -200;
     for (int i=0; i<optionCount; i++) {
         UIButton *optionBtn = self.optionsView.subviews[i];
         [optionBtn setTitle:question.options[i] forState:UIControlStateNormal];
-        NSLog(@"question.options[%d] = %@",i,question.options[i]);
         optionBtn.hidden = NO;
     }
 }
